@@ -7,7 +7,6 @@ import java.io.IOException;
 import java.io.Reader;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Scanner;
 
 public class Order {
 	String orderName;
@@ -15,9 +14,7 @@ public class Order {
 	int goodsEA;
 	int goodsPrice;
 	String orderTime;
-
-	Scanner sc = new Scanner(System.in);
-
+	
 	public Order() {
 		super();
 	}
