@@ -22,15 +22,6 @@ public class Order {
 		super();
 	}
 
-	public Order(int orderNum, String orderName, String goodsName, int goodsEA, int goodsPrice, String orderTime) {
-		super();
-		this.orderName = orderName;
-		this.goodsName = goodsName;
-		this.goodsEA = goodsEA;
-		this.goodsPrice = goodsPrice;
-		this.orderTime = orderTime;
-	}
-
 	// 1. 상품 주문
 	public void goodsOrder(String orderName, String goodsName, int goodsEA, int goodsPrice) throws IOException {
 		LocalDateTime realTime = LocalDateTime.now();
@@ -38,7 +29,6 @@ public class Order {
 		String formatDate = realTime.format(formatter);
 		int orderNum = getOrderNum()+1;
 		
-		Order order = new Order(orderNum, orderName, goodsName, goodsEA, goodsPrice, formatDate);
 		String txtDate = String.format("주문번호: %d / 고객명: %s / 제품명: %s / 주문수량: %d / 가격: %d / 주문일시: %s", orderNum,
 				orderName, goodsName, goodsEA, goodsPrice, formatDate);
 
